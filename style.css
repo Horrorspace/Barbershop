@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "PT Sans - Narrow Bold";
+    font-style: normal;
+    font-weight: 400;
+
+    src: local("PT Sans - Narrow Bold"),
+        url("/fonts/web/ptsansnarrowbold.woff2"),
+        url("/fonts/web/ptsansnarrowbold.woff")
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -71,18 +81,31 @@ li {
     line-height: 42px;
 }
 
+.news {
+    margin-left: 81px;
+}
+.news h2 {
+    margin-top: 55px;
+}
+
+.news-list {
+    margin: 0;
+    padding: 0;
+}
+
 .news-item time{
     text-transform: none;
 }
 
-.gallery-content {
-    weight: 286px;
-    height: 164px;
-    border: 7px solid white;
+.gallery {
+    margin-left: 92px;
 }
-.gallery-content a {
-    weight: 286px;
-    height: 164px;
+
+.gallery-content {
+    border: 7px solid white;
+    margin: 0;
+    margin-right: 100px;
+    padding: 0;
 }
 
 .index-columns-2 {
@@ -92,6 +115,11 @@ li {
     background-image: url("img/png/pic2.png");
     background-repeat: repeat;
     background-position: top center;
+}
+
+.index-columns-2 h3 {
+    font-size: 30px;
+    line-height: 42px;
 }
 
 .button {

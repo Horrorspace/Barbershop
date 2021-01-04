@@ -38,6 +38,11 @@ li {
     list-style-type: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .hidden {
     display: none;
 }
@@ -69,6 +74,7 @@ li {
     flex-direction: column;
     align-items: center;
     min-height: 287px;
+    flex-shrink: 0;
 
     color: #ffffff;
     font-size: 16px;
@@ -83,6 +89,7 @@ li {
     width: 100%;
     min-height: 72px;
     align-items: center;
+    flex-shrink: 0;
 
     background-color: black;
 }
@@ -115,13 +122,16 @@ li {
     min-height: 72px;
     align-items: center;
     margin-right: auto;
+    flex-shrink: 0;
 }
 
 .user-navigation {
     display: flex;
     flex-direction: row;
     min-height: 72px;
+    width: 107 px;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .site-navigation a,
@@ -139,6 +149,28 @@ li {
 .user-navigation a:hover,
 .user-navigation a:focus {
     background-color: #242424;
+}
+
+.user-navigation a {
+    padding-left: 53px;
+}
+
+.login-link {
+    position: relative;
+}
+
+.login-link::before {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    right: 69px;
+    top: 32px;
+
+    width: 14px;
+    height: 14px;
+
+    content: url("img/svg/login.svg");
 }
 
 .features-list {
@@ -359,10 +391,20 @@ li {
 .footer {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+
 
     width: 100%;
     height: 193px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-container {
+    width: 2560px;
+    height: 193px;
+    margin-right: auto;
+    margin-left: auto;
 
     background-color: #212121;
     background-image: url("img/png/pic6.png");
@@ -370,7 +412,7 @@ li {
     background-position: top center;
 }
 
-.footer-container {
+.footer-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -428,13 +470,7 @@ li {
 .social-button:hover,
 .social-button:focus
  {
-    background-color: white;
-}
-
-.social-button svg:hover,
-.social-button svg:focus
- {
-    opacity: 0.4;
+    background-color: #663d15;
 }
 
 .footer-developed {
